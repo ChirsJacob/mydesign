@@ -1,0 +1,123 @@
+/* 容器样式 */
+.right {
+    padding: 24px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+  }
+  
+  .statistics-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+  }
+  
+  .statistics-container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 12px;
+  }
+  
+  /* 工具栏样式 */
+  .tool {
+    margin-bottom: 32px;
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 6px;
+  }
+  
+  .class-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .class-info span {
+    color: #666;
+    font-size: 15px;
+  }
+  
+  .class-info select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 160px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .class-info select:hover {
+    border-color: #1890ff;
+  }
+  
+  .class-info select:focus {
+    outline: none;
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+  
+  /* 图表容器样式 */
+  .charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+  
+  .chart-box {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chart-box h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 4px solid #1890ff;
+  }
+  
+  /* 响应式适配 */
+  @media screen and (max-width: 768px) {
+    .right {
+      padding: 16px;
+    }
+    
+    .statistics-container {
+      padding: 16px;
+    }
+    
+    .charts-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .chart-box {
+      padding: 12px;
+    }
+  }
+  
+  /* 加载动画 */
+  .chart-box {
+    position: relative;
+  }
+  
+  .chart-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+  }
+  
+  .chart-box.loading::before {
+    display: block;
+  }
